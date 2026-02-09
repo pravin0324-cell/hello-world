@@ -1,7 +1,7 @@
 from django.test import TestCase
 import pytest
 from django.urls import reverse
-from
+
 # Create your tests here.
 @pytest.mark.django_db
 def test_index_view(client):
