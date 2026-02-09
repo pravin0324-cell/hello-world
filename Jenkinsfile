@@ -21,7 +21,10 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                sh 'docker run --rm $IMAGE_NAME pytest'
+                sh '''
+                docker run --rm $IMAGE_NAME \
+                python manage.py test
+                '''
             }
         }
     }
